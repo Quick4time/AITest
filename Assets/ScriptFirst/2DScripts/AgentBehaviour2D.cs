@@ -5,6 +5,8 @@ public class AgentBehaviour2D : MonoBehaviour
 {
     public GameObject target;
     protected Agent2D agent2d;
+    public float weight = 1.0f;
+    public float priority = 1;
 
     public virtual void Awake()
     {
@@ -12,7 +14,22 @@ public class AgentBehaviour2D : MonoBehaviour
     }
     public virtual void Update()
     {
-        agent2d.SetSteering2D(GetSteering2D());
+        if (agent2d.blendWeight)
+        {
+            agent2d.SetSteering2D(GetSteering2D(), weight);
+        }
+        else if (agent2d.blendPriority)
+        {
+            agent2d.SetSteering2D(GetSteering2D(), priority);
+        }
+        else if (agent2d.blendPripeline)
+        {
+            agent2d.SetSteering2D(GetSteering2D(), true);
+        }
+        else
+        {
+            agent2d.SetSteering2D(GetSteering2D());
+        }
     }
 
     public virtual Steering2D GetSteering2D()

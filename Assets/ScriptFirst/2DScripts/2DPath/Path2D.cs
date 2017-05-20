@@ -62,8 +62,7 @@ public class Path2D : MonoBehaviour
     }
     //Определим первую функцию для абстрагирования GetParam.
     public float GetParam (Vector2 position, float lastParam)
-    {
-        
+    {   
         // Находим ближайший к агенту сегмент.
         float param = 0.0f;
         PathSegment2D currentSegment = null;

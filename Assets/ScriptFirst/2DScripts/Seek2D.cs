@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seek2D : AgentBehaviour2D {
+public class  Seek2D : AgentBehaviour2D {
 
     public override Steering2D GetSteering2D()
     {
