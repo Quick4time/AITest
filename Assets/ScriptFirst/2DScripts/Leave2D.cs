@@ -7,7 +7,7 @@ public class Leave2D : AgentBehaviour2D {
     public float escapeRadius;
     public float dangerRadius;
     public float timeToTarget = 0.1f;
-
+    
     public override Steering2D GetSteering2D()
     {
         // Первая половина функции GetSteering вычесляет расстояние.
