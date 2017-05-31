@@ -1,16 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Agent : MonoBehaviour {
     public float maxSpeed;
     public float maxAccel;
-    public float orientation; // check
+    public float orientation; /// check
     public float rotation;  // check
     public float maxRotation; // check
     public float maxAngularAccel;
     public Vector3 velocity;
     protected Steering steering;
-
+	
     void Start()
     {
         velocity = Vector3.zero;
